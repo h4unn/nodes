@@ -12,8 +12,7 @@ app.use(express.static(path.join(__dirname, "public"))); // 정적 파일 호출
 
 app.use("/admin", adminRouter);
 app.use(shopRoute);
-app.use(console.log(__dirname));
-console.log(__dirname + "11");
+
 app.use((req, res, next) => {
   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
